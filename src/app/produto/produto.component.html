@@ -1,0 +1,55 @@
+<title>Vendas de veículos pelas concessionárias - Caminhões</title>
+<h1>Vendas de veículos pelas concessionárias - Caminhões</h1>
+<br>
+<h4>Conceito: Valor da produção de veículos automotores no País. Refletem o desempenho das vendas das empresas associadas a(o): estoque e venda de veículos pelas concessionárias produção e vendas de veículos e congêneres produção e vendas de motociclos</h4>
+<h4>Fonte: Federação Nacional da Distribuição de Veículos Automotores</h4>
+ 
+<p>Clique em 'Mostrar' para exibir a tabela ou Clique em 'Esconder' para ocultar a tabela</p>
+
+<button><a href="https://api.bcb.gov.br/dados/serie/bcdata.sgs.7386/dados?formato=json">URL para o serviço</a></button>
+<button><a href="https://dados.gov.br/dataset/7386-vendas-de-veiculos-pelas-concessionarias-caminhoes">Possiveis documento e Informções</a></button>
+
+
+<style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 5px;
+    }
+    th {
+      text-align: left;
+    }
+</style>
+
+
+
+<button (click)= "ngOnInit()">Esconder !!</button> <button (click)= "exibir()">Mostrar !!</button><br>
+        <table [hidden]="mostrar" style="width:10%">
+  
+            <section *ngFor='let localidade of localidades |async' >
+        
+    <tr>
+                <th>DATA</th>
+                <th>VALOR</th> 
+                </tr>
+    
+    <tr>
+        <td><p>{{localidade.data}}</p></td>
+        <td><p>{{localidade.valor}}</p> </td>
+    </tr>
+            </section>  
+</table>
+  
+
+
+
+
+
+
+
+
+
+
+
